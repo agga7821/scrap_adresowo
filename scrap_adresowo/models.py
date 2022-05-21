@@ -7,13 +7,12 @@ from sqlalchemy import func
 Base = declarative_base()
 
 
-class Apartment(Base):
+class Property(Base):
     __tablename__ = "apartments"
 
-    id = Column(Integer, primary_key=True)
     city = Column(String)
     district = Column(String)
-    property_type = Column(String)
+    type = Column(String)
     address = Column(String)
     link = Column(String, primary_key=True)
     description = Column(String)
