@@ -10,9 +10,7 @@ class AdresowoSpider(scrapy.Spider):
     handle_httpstatus_list = [302]
 
     start_urls = [
-        "https://adresowo.pl/mieszkania/krakow/",
-        # "https://adresowo.pl/domy/krakow/",
-        # "https://adresowo.pl/dzialki/krakow/"
+        "https://adresowo.pl/mieszkania/fma/",
     ]
 
     max_retries = 3
