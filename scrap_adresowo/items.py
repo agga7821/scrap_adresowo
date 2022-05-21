@@ -37,10 +37,10 @@ def float_or_none(value):
         return None
 
 
-class ApartmentItem(scrapy.Item):
+class PropertyItem(scrapy.Item):
     city = scrapy.Field(input_processor=MapCompose(first_split_space))
     district = scrapy.Field(input_processor=MapCompose(from_second_split_space))
-    property_type = scrapy.Field()
+    type = scrapy.Field()
     price = scrapy.Field(input_processor=MapCompose(remove_spaces, float_or_none))
     rooms = scrapy.Field(input_processor=MapCompose(int))
     floor = scrapy.Field(input_processor=MapCompose(int))
